@@ -1,0 +1,81 @@
+<scalastyle>
+ <name>Scalastyle standard configuration</name>
+
+ <check level="warning" class="org.scalastyle.file.FileTabChecker" enabled="true"></check>
+ <check level="warning" class="org.scalastyle.file.FileLineLengthChecker" enabled="true">
+  <parameters>
+   <parameter name="maxLineLength"><![CDATA[100]]></parameter>
+  </parameters>
+ </check>
+ <check level="warning" class="org.scalastyle.file.NewLineAtEofChecker" enabled="true">
+ </check>
+ <check level="warning" class="org.scalastyle.file.WhitespaceEndOfLineChecker" enabled="true">
+  <customMessage>Avoid whitespace at the end of a line. It can cause needless differences for version control.</customMessage>
+ </check>
+
+ <check level="warning" class="org.scalastyle.scalariform.LowercasePatternMatchChecker" enabled="true">
+   <customMessage>It is pointless to use pattern matching when there is only a single case and the pattern is a single, lowercase name as in '{ case x => ... }'</customMessage>
+ </check>
+ <check level="warning" class="org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker" enabled="true"></check>
+ <check level="warning" class="org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker" enabled="true"></check>
+ <check level="warning" class="org.scalastyle.scalariform.NoWhitespaceBeforeRightBracketChecker" enabled="true"></check>
+ <check level="warning" class="org.scalastyle.scalariform.NullChecker" enabled="true"></check>
+ <check level="warning" class="org.scalastyle.scalariform.ProcedureDeclarationChecker" enabled="true">
+   <customMessage>Missing = in def. If you intended to write a procedure use 'def p(): Unit = { ... }' syntax instead of 'def p() { ... }'</customMessage>
+ </check>
+ <check level="warning" class="org.scalastyle.scalariform.RedundantIfChecker" enabled="true">
+   <customMessage>An 'if' where both branches are literally just 'true' or 'false' should be simplified. For example, replace 'if (b) true else false' with just 'b', or 'if (b) false else true' with '!b'.</customMessage>
+ </check>
+ <check level="warning" class="org.scalastyle.scalariform.UppercaseLChecker" enabled="true">
+   <customMessage>Use uppercase L for long literals. For exammple, 100L instead of 100l.</customMessage>
+ </check>
+
+ <check level="warning" class="org.scalastyle.scalariform.TokenChecker" enabled="true">
+  <parameters>
+   <parameter name="regex"><![CDATA[^[lO][lO10]*$]]></parameter>
+  </parameters>
+  <customMessage>Don't use names that look like numbers in some fonts, such as 'l' or 'O'.</customMessage>
+ </check>
+ <check level="warning" class="org.scalastyle.scalariform.TokenChecker" enabled="true">
+  <parameters>
+   <parameter name="regex"><![CDATA[^[ai]sInstanceOf$]]></parameter>
+  </parameters>
+  <customMessage>Don't use isInstanceOf or asInstanceOf. Use pattern matching instead.</customMessage>
+ </check>
+ <check level="warning" class="org.scalastyle.scalariform.TokenChecker" enabled="true">
+  <parameters>
+   <parameter name="regex"><![CDATA[^:\+$]]></parameter>
+  </parameters>
+  <customMessage>Don't use the :+ operator on Lists or Arrays. It's too inefficient.</customMessage>
+ </check>
+
+ <!-- Enable these checks for functional code -->
+ <check level="warning" class="org.scalastyle.scalariform.ReturnChecker" enabled="false"></check>
+ <check level="warning" class="org.scalastyle.scalariform.VarFieldChecker" enabled="false"></check>
+ <check level="warning" class="org.scalastyle.scalariform.VarLocalChecker" enabled="false"></check>
+ <check level="warning" class="org.scalastyle.scalariform.TokenChecker" enabled="false">
+  <parameters>
+   <parameter name="regex"><![CDATA[^(to)?Array$]]></parameter>
+  </parameters>
+  <customMessage>Don't use Arrays when functional/immutable code is desired.</customMessage>
+ </check>
+
+ <check level="warning" class="org.scalastyle.scalariform.ClassNamesChecker" enabled="true">
+  <parameters>
+   <parameter name="regex"><![CDATA[^[A-Z].*$]]></parameter>
+  </parameters>
+  <customMessage>Class name should start with an uppercase letter</customMessage>
+ </check>
+ <check level="warn" class="org.scalastyle.scalariform.MethodNamesChecker" enabled="true">
+  <parameters>
+   <parameter name="regex"><![CDATA[^[a-z].*$]]></parameter>
+  </parameters>
+  <customMessage>Method name should start with a lowercase letter</customMessage>
+ </check>
+ <check level="warning" class="org.scalastyle.scalariform.MethodArgumentNamesChecker" enabled="true">
+  <parameters>
+   <parameter name="regex"><![CDATA[^[a-z].*$]]></parameter>
+  </parameters>
+  <customMessage>Method argument name should start with a lowercase letter</customMessage>
+ </check>
+</scalastyle>
