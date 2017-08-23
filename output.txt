@@ -1,1 +1,11 @@
-NO OUTPUT YET
+[0m[[0minfo[0m] [0mLoading project definition from C:\Users\x94296\Desktop\AY 2018-1\CS478\hw1-DekuZero\project[0m
+[0m[[32msuccess[0m] [0mcreated output: C:\Users\x94296\Desktop\AY 2018-1\CS478\hw1-DekuZero\target[0m
+CS478: hw1 (EECS Tester 0.3.2)
+DekuZero (Conner Russell)
+Data source: hw1.tests (remote)
+Begin testing sumArray at Tue Aug 22 23:42:26 EDT 2017
+.....
+Passed 5/5 tests in 0.107 seconds.
+Begin testing sumList at Tue Aug 22 23:42:26 EDT 2017
+.....
+Passed 5/5 tests in 0.005 seconds.
